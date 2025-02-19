@@ -1,0 +1,44 @@
+/* Global Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-color);
+  color: var(--heading-color);
+}
+
+/* CSS Variables for Consistency */
+:root {
+  --bg-color: #030c20;
+  --navbar-bg: #0f172a;
+  --accent-color: #b4d128;  /* Lime green for accents */
+  --cta-color: #e72b40;     /* Bold red for CTAs if desired */
+  --primary-bg: #2c4494;    /* Deep blue for main background elements */
+  --heading-color: #fff;
+  --text-color: #b8b5b5;
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+}
+
+/* Ensure the main container stretches (for footer, etc.) */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Utility Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}

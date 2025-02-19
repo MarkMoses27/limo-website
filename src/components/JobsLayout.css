@@ -1,0 +1,186 @@
+/* JobsLayout.css */
+
+:root {
+  --bg-color: #030c20;
+  --navbar-bg: #0f172a;
+  --accent-color: #b4d128;
+  --cta-color: #e72b40;
+  --heading-color: #fff;
+  --text-color: #b8b5b5;
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+}
+
+.jobs-layout {
+  background: linear-gradient(135deg, var(--bg-color), var(--navbar-bg));
+  padding: 4rem 2rem;
+  color: var(--heading-color);
+  font-family: var(--font-body);
+}
+
+.jobs-layout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Header */
+.jobs-header {
+  margin-bottom: 3rem;
+}
+
+.jobs-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.jobs-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+}
+
+/* Countries Grid */
+.job-countries {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.country-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.country-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 165, 0, 0.3);
+}
+
+.country-name {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--heading-color);
+  text-transform: uppercase;
+}
+
+.positions-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.position-item {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.position-title {
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.job-type {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-left: 0.5rem;
+  color: var(--accent-color);
+}
+
+.salary-info {
+  color: var(--accent-color);
+  margin-left: 0.5rem;
+}
+
+.notes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  color: var(--cta-color);
+}
+
+/* Requirements & Application Process */
+.requirements-section,
+.application-process-section {
+  margin-bottom: 3rem;
+}
+
+.section-heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.requirements-list,
+.application-process-list {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: left;
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.cta-text {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.cta-apply-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent-color);
+  color: #030c20;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.cta-apply-btn:hover {
+  background: #9aae1f;
+  transform: translateY(-3px);
+}
+
+.contact-info {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .jobs-title {
+    font-size: 2rem;
+  }
+  .country-name {
+    font-size: 1.25rem;
+  }
+  .section-heading {
+    font-size: 1.5rem;
+  }
+  .cta-apply-btn {
+    font-size: 0.95rem;
+  }
+}

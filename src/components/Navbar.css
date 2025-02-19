@@ -1,0 +1,120 @@
+/* Navbar Base */
+.navbar {
+  background: linear-gradient(135deg, var(--navbar-bg, #0f172a), var(--bg-color, #030c20));
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Container for centering content */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo Styling */
+.navbar-logo img {
+  width: 180px;    /* Adjust width as needed */
+  height: auto;
+}
+
+/* Desktop Navigation Menu */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Center the nav links */
+  gap: 2rem;               /* Increased gap for better spacing */
+  margin: 0 auto;          /* Center the menu itself */
+  padding: 0;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: var(--heading-color, #fff);
+  font-size: 1.125rem;  /* Slightly larger font size */
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent-color, #ffa500);
+  transition: width 0.3s;
+}
+
+.navbar-link:hover {
+  color: var(--accent-color, #ffa500);
+  transform: translateY(-2px);
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+/* Mobile Menu Icon - Hidden on Desktop */
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+  color: var(--heading-color, #fff);
+  z-index: 1100;
+}
+
+/* Mobile Menu Dropdown */
+.mobile-menu {
+  background: var(--navbar-bg, #0f172a);
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-menu-list {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+}
+
+.mobile-menu-item {
+  margin-bottom: 1rem;
+}
+
+.mobile-menu-link {
+  text-decoration: none;
+  color: var(--heading-color, #fff);
+  font-size: 1.2rem;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-link:hover {
+  color: var(--accent-color, #ffa500);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  /* Hide desktop menu */
+  .navbar-menu {
+    display: none;
+  }
+  /* Show mobile menu icon */
+  .mobile-menu-icon {
+    display: block;
+  }
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

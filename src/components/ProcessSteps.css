@@ -1,0 +1,95 @@
+/* OurProcess.css */
+
+/* Global variables should be defined in your global CSS, but we include defaults here */
+:root {
+    --bg-color: #030c20;
+    --navbar-bg: #0f172a;
+    --accent-color: #b4d128; /* Lime green accent */
+    --cta-color: #e72b40;    /* Bold red for CTAs (if needed) */
+    --text-color: #b8b5b5;
+    --heading-color: #fff;
+    --font-body: 'Inter', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+  }
+  
+  /* Our Process Section */
+  .our-process {
+    background: linear-gradient(135deg, var(--bg-color), var(--navbar-bg));
+    color: var(--heading-color);
+    padding: 4rem 2rem;
+    font-family: var(--font-body);
+  }
+  
+  .process-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Title and Subtitle */
+  .process-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  .process-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+  }
+  
+  /* Process Steps Grid */
+  .process-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  /* Individual Process Step Card */
+  .process-step {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    flex: 0 0 250px;
+    max-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 165, 0, 0.3);
+  }
+  
+  .step-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+  }
+  
+  .step-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--heading-color);
+  }
+  
+  .step-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .process-steps {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .process-step {
+      margin: 0 auto;
+    }
+  }
+  

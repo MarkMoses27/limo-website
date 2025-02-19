@@ -1,0 +1,79 @@
+:root {
+    --bg-color: #030c20;
+    --navbar-bg: #0f172a;
+    --accent-color: #b4d128; /* Lime green accent */
+    --heading-color: #fff;
+    --text-color: #b8b5b5;
+    --font-body: 'Inter', sans-serif;
+  }
+  
+  .germany-jobs {
+    background: linear-gradient(135deg, var(--bg-color), var(--navbar-bg));
+    padding: 4rem 2rem;
+    color: var(--heading-color);
+    font-family: var(--font-body);
+  }
+  
+  .germany-jobs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .jobs-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--accent-color);
+  }
+  
+  .jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .job-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+  }
+  
+  .job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 165, 0, 0.3);
+  }
+  
+  .job-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--heading-color);
+  }
+  
+  .job-company,
+  .job-location {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+  }
+  
+  .job-description {
+    font-size: 0.95rem;
+    color: var(--text-color);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .jobs-title {
+      font-size: 2rem;
+    }
+    .job-title {
+      font-size: 1.25rem;
+    }
+    .job-description {
+      font-size: 0.9rem;
+    }
+  }
+   

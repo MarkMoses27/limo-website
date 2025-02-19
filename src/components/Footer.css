@@ -1,0 +1,98 @@
+/* Updated Footer Base Styles */
+.footer {
+  background: linear-gradient(135deg, #030c20, #0f172a);
+  color: #b8b5b5;
+  padding: 2rem 1rem;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeInFooter 1s ease-in-out;
+}
+
+@keyframes fadeInFooter {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Contact Section */
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.phone-icon {
+  transform: scaleX(-1);
+  transition: transform 0.3s ease;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-contact-item:hover {
+  transform: translateY(-3px);
+  color: var(--accent-color, #b4d128);
+}
+
+/* Icon Styling for Contact Items */
+.footer-icon {
+  font-size: 1.2rem;
+  color: var(--accent-color, #b4d128);
+  transition: color 0.3s ease;
+}
+
+/* Social Media Section */
+.footer-social {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-social a {
+  color: #b8b5b5;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: var(--cta-color, #e72b40);
+  transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom p:hover {
+  color: var(--accent-color, #b4d128);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-contact,
+  .footer-social {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

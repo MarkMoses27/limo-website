@@ -1,0 +1,78 @@
+/* Global Variables (Define these in your global CSS if preferred) */
+:root {
+  --bg-color: #030c20;
+  --navbar-bg: #0f172a;
+  --accent-color: #b4d128;  /* Lime green accent */
+  --cta-color: #e72b40;     /* Bold red (if needed) */
+  --heading-color: #fff;
+  --text-color: #b8b5b5;
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background: linear-gradient(135deg, var(--bg-color), var(--navbar-bg));
+  padding: 4rem 2rem;
+  color: var(--heading-color);
+  font-family: var(--font-body);
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonials-title {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Individual Testimonial Card */
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 165, 0, 0.3);
+}
+
+.testimonial-quote {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: var(--text-color);
+}
+
+.testimonial-author {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .testimonials-title {
+    font-size: 2.25rem;
+  }
+  .testimonial-quote {
+    font-size: 1rem;
+  }
+  .testimonial-author {
+    font-size: 0.95rem;
+  }
+}

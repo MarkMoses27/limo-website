@@ -1,0 +1,114 @@
+/* Contact Section Background & Container */
+.contact {
+  background: linear-gradient(135deg, #030c20, #0f172a);
+  padding: 4rem 2rem;
+  color: var(--white-color, #fff);
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Titles and Subtitles */
+.contact-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color, #b4d128);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-color, #b8b5b5);
+}
+
+/* Contact Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  background: #1a1a1a;
+  color: #fff;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background: #222;
+  border-color: var(--accent-color, #b4d128);
+}
+
+/* Submit Button */
+.contact-btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  background: var(--accent-color, #b4d128);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+  background: var(--cta-color, #e72b40);
+}
+
+/* Success Message */
+.success-message {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--accent-color, #b4d128);
+}
+
+/* Error Message */
+.error-message {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--cta-color, #e72b40);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2rem;
+  }
+  .contact-subtitle {
+    font-size: 1rem;
+  }
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.95rem;
+  }
+  .contact-btn {
+    font-size: 1rem;
+  }
+}
